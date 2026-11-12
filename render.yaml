@@ -1,0 +1,14 @@
+# Render blueprint: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: evenly
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      # Connection string of a free Postgres database (for example from neon.tech).
+      # Without it, groups are saved to a file that Render wipes on every restart.
+      - key: DATABASE_URL
+        sync: false

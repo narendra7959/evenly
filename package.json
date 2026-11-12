@@ -1,0 +1,25 @@
+{
+  "name": "evenly",
+  "version": "1.0.0",
+  "description": "Group bill splitter: add what everyone paid and see who owes whom, in the fewest payments.",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "pg-mem": "^3.0.5",
+    "socket.io-client": "^4.8.1"
+  }
+}
